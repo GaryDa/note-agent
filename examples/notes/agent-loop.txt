@@ -1,0 +1,2 @@
+agent loop：呼叫模型、執行工具、把結果送回去
+直到 stop_reason 不是 tool_use 才停

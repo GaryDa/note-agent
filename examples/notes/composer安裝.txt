@@ -1,0 +1,2 @@
+composer.phar 下載後要核對 sha256
+diagnose 顯示 pubkeys FAIL 只影響 self-update

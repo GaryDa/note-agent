@@ -1,0 +1,2 @@
+tool_result 要全部放在同一則 user 訊息
+工具失敗要回 is_error，不要讓程式掛掉

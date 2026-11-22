@@ -1,0 +1,2 @@
+晚上把 note-agent 的 README 寫完
+順便想一下 eval 要怎麼量

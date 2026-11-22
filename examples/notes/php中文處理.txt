@@ -1,0 +1,2 @@
+json_encode 不加 JSON_UNESCAPED_UNICODE 中文會變成 \u 跳脫
+mb_strlen 才是字數，strlen 是位元組數
