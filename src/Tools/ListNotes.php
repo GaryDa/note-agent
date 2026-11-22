@@ -8,13 +8,15 @@ use NoteAgent\NoteSession;
 
 final class ListNotes implements Tool
 {
+    public const string NAME = 'list_notes';
+
     public function __construct(private readonly NoteSession $session)
     {
     }
 
     public function name(): string
     {
-        return 'list_notes';
+        return self::NAME;
     }
 
     public function definition(): array

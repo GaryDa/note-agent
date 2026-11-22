@@ -8,6 +8,7 @@ use NoteAgent\NoteSession;
 
 final class ReadNote implements Tool
 {
+    public const string NAME = 'read_note';
     public const int MAX_CHARS = 8000;
 
     public function __construct(private readonly NoteSession $session)
@@ -16,7 +17,7 @@ final class ReadNote implements Tool
 
     public function name(): string
     {
-        return 'read_note';
+        return self::NAME;
     }
 
     public function definition(): array
@@ -47,6 +48,8 @@ final class ReadNote implements Tool
         if (!is_string($file) || $file === '') {
             throw new ToolInputException('缺少 file 參數；請傳入 list_notes 回傳的檔名');
         }
+        // 這裡只是為了給模型比較明確的錯誤訊息；真正的安全檢查是下面的 hasFile()：
+        // 檔名必須跟啟動時掃描到的清單完全相同才能讀取
         if (str_contains($file, '/') || str_contains($file, '\\') || str_contains($file, '..')) {
             throw new ToolInputException("file 只能是檔名，不能包含路徑：{$file}");
         }

@@ -8,6 +8,7 @@ use NoteAgent\NoteSession;
 
 final class WriteCategory implements Tool
 {
+    public const string NAME = 'write_category';
     public const int MAX_CATEGORIES = 6;
     public const int MAX_NAME_CHARS = 40;
 
@@ -20,7 +21,7 @@ final class WriteCategory implements Tool
 
     public function name(): string
     {
-        return 'write_category';
+        return self::NAME;
     }
 
     public function definition(): array

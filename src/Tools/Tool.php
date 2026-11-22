@@ -10,6 +10,10 @@ namespace NoteAgent\Tools;
  */
 interface Tool
 {
+    /**
+     * 工具名稱。實作時用 class 常數 NAME 保存，讓其他地方不用建立物件就能引用
+     * （interface 無法強制定義常數，所以用方法當作規格）。
+     */
     public function name(): string;
 
     /**
